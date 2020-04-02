@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="vendor/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="header.js"></script>
+ 	<script type="text/javascript" src="checkout.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- link css và jquery của sweetalert -->
+	<link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+	<!-- ------------------- -->
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+ 	<link rel="stylesheet" type="text/css" href="checkout.css">
+</head>
+<body>
+	<div class="header">
+  	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;border:none;" >
+			       <span class="menu-icon"><i class="fa fa-bars"></i></span>
+			</button>  
+		  	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			    <ul class="navbar-nav  mx-auto">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="#">Chăm sóc khách hàng<span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Bán hàng</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Kiểm tra đơn hàng</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Đăng nhập</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Đăng ký</a>
+				      </li>
+				       <li class="nav-item" style="visibility: hidden;opacity: 0; z-index: 1000;position: fixed; ">
+				        <a class="nav-link" href="#" >Thông tin cá nhân</a>
+				      </li>
+
+			    </ul>
+			</div>
+		</nav>
+		<div class="bar-search">
+			 <div class="logo" id="id-logo">
+			    <a href="index.html" class="home-link" title="Trang chủ"><img src="images/logo_vungcaofood.png" width="100%"> </a>	
+			 </div>
+			 <div class="search-blank  ">
+			 	<div class="child-search-blank mx-auto " >
+			 		<input class="form-search" type="search" placeholder="Tìm kiếm trên VungCaoFood..." >
+			 		<button class="btn-search " type="submit" title="Tìm kiếm">
+			 		<i class="fa fa-search"></i>
+			 		</button>
+			 	</div>
+			 </div>
+			 <span class="cart-box">
+			 	<a href="cart.html">
+			 		<span class="cart" title="Giỏ hàng">				 	
+					 	<i class="fa fa-shopping-cart"></i>
+					 </span>
+					 <span class="num-cart">0</span>
+			 	</a>
+			 </span>
+			 
+		</div>
+		<div class="mini-menu"  >
+			<div class="btn-list-product">
+				<span class="title-of-list-product">Danh mục</span>
+				<span class="icon-of-list-product"><i class="fa fa-angle-down"></i>
+				</span>
+			</div>
+			<div class="mini-sevice-content ">
+				<div class="content mx-auto" >
+					<div class="mini-card-service" title="Liên hệ">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-envelope"></i></span>
+							<span class="title-card">Liên hệ</span>
+						</a>
+					</div>
+					<div class="mini-card-service" title="Đánh giá">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-star"></i></span>
+							<span class="title-card">Đánh giá</span>
+						</a>
+					</div>
+					<div class="mini-card-service" title="Mã giảm giá">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-bookmark"></i></i></i></span>
+							<span class="title-card">Mã giảm giá</span>
+						</a>
+					</div>
+					<div class="mini-card-service" title="Ưu đãi">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-heart"></i></span>
+							<span class="title-card">Ưu đãi</span>
+						</a>
+					</div>	
+				</div>
+			</div>	
+		</div>
+		<div class="vcf-memu-mobile-bottom">
+				<div class="vcf-menu-mobile-item">
+					<a href="index.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-home mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Trang chủ</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-bag mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Mall</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="filterproduct.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-th mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Danh mục</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-user mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Tài khoản</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="cart.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-cart mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Giỏ hàng</div>
+						</div>
+					</a>
+				</div>
+			</div>
+	</div>
+	<!-- tab-list -->
+	<div class="dropdown-sub-menu">
+		<ul class="vcf-list dropdown-sub-menu-level-1">
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="1">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					<li class="vcf-item item-dropdown-sub-menu-level-2" isHover="false">
+						<h6>danh mucj</h6>
+						<ul class="vcf-list dropdown-sub-menu-level-3"></ul>
+					</li>
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="2">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="3">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="4">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="5">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="6">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="7">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="8">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="9">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- nội dung -->
+	<div class="checkout-container ">
+		<div class="col-left col-lg-8 col-md-8 col-12">
+			<div class="area-address">
+				<div style="color: black; font-size: 150%;margin-left: 10px; width: 100%; text-align: center;">
+					Thông tin giao hàng
+				</div>
+				<div class="customer-infomation-card">
+					<div class="name-customer">
+						<span class="label">Tên khách hàng:</span><span class="value">Trần Ngọc Hiếu</span>
+					</div>
+					<div class="address">
+						<span class="label">Địa chỉ nhận hàng:</span><span class="value">Đội 1, Thôn Linh Cận Sơn, xã Quảng Sơn , thị xã Ba Đồn, tỉnh Quảng Bình</span>
+					</div>
+					<div class="address-email">
+						<span class="label">Email:</span><span class="value">t.n.hieu97@gmail.com</span>
+					</div>
+					<div class="number-phone">
+						<span class="label">Số điện thoại:</span><span class="value">0345195114</span>
+					</div>
+				</div>
+				<form>
+					<div class="area-address-left">
+						<div class="mod-input field-name">
+							<div class="label">Tên</div>
+							<div class="field-input">
+								<input type="text" name="txt-name" placeholder="Nhập họ và tên" data-meta="field">
+							</div>
+							<span class="warn">*thông tin bắt buộc*</span>
+						</div>
+						<div class="mod-input field-name">
+							<div class="label">Điện thoại</div>
+							<div class="field-input">
+								<input type="text" name="txt-phone" placeholder="Nhập số điện thoại" data-meta="field">
+							</div>
+							<span class="warn">*thông tin bắt buộc*</span>
+						</div>
+					</div>
+					<div class="area-address-right">
+						<div class="mod-input field-name">
+							<div class="label">Địa chỉ nhận hàng</div>
+							<div class="field-input">
+								<input type="text" name="txt-address" placeholder="vui lòng nhập địa chỉ của bạn" data-meta="field">
+							</div>
+							<span class="warn">*thông tin bắt buộc*</span>
+						</div>
+						<div class="mod-input field-name">
+							<div class="label">Tỉnh/Thành phố</div>
+							<input type="hidden" name="txt-tinh" placeholder="Nhập họ và tên" data-meta="field">
+							<div class="field-select">
+								<div class="select-area area-enable">					
+									<span class="selected-address">tỉnh/thành phố</span>
+									<span class="icon-next-select float-right"><i class="fa fa-angle-down"></i></span>
+								</div>
+							</div>
+							<span class="warn">*thông tin bắt buộc*</span>
+						</div>
+						<div class="mod-input field-name">
+							<div class="label">Quận/Huyện</div>
+							<input type="hidden" name="txt-huyen" placeholder="Nhập họ và tên" data-meta="field">
+							<div class="field-select">
+								<div class="select-area area-disable">					
+									<span class="selected-address">quận/huyện</span>
+									<span class="icon-next-select float-right"><i class="fa fa-angle-down"></i></span>
+								</div>
+							</div>
+							<span class="warn">*thông tin bắt buộc*</span>
+						</div>
+						<div class="mod-input field-name">
+							<div class="label">Phường/Xã</div>
+							<input type="hidden" name="txt-xa" placeholder="Nhập họ và tên" data-meta="field">
+							<div class="field-select">
+								<div class="select-area area-disable">					
+									<span class="selected-address">phường/xã</span>
+									<span class="icon-next-select float-right"><i class="fa fa-angle-down"></i></span>
+								</div>
+							</div>
+							<span class="warn">*thông tin bắt buộc*</span>
+						</div>
+						<div class="btn-save-address">
+							<button type="submit" class="btn-summit">LƯU</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="package">
+				<div class="title-packege" style="background-color: orange; margin-bottom: 10px;width: 100%; display: inline-block;">
+					<div class="title-package-left float-left" style="font-size: 120%;font-weight: bold;">
+						Thông tin sản phẩm
+					</div>
+					<div class="title-package-right float-right">
+						<span style="margin-right: 5px;">được giao bởi:</span><span style="font-weight: bold; color: white; margin-right: 5px;">olala shop</span>
+					</div>
+				</div>
+				<div class="content-package">
+					<div class="col-product-left">
+						<div class="infor-product">
+							<div class="img-product" style="background-image: url(images/tao-do.jpg);"></div>
+							<div class="infor-product-right">
+								<div class="name">
+									táo đỏ trung quốc , đảm bảo 100% dùng thuốc trừ sâu ăn vào trường sinh bất tử ử ử
+								</div>
+								<div class="list-properties-product">
+									<span  class="properties-product">màu đỏ</span><span  class="properties-product">nặng 100gram</span>
+								</div>
+								<div class="qty-product">
+									<span style="margin-right: 10px, margin-bottom: 20px;margin-top:20px;">số lượng: </span><span style="color: orange; font-weight: bold;">3</span>
+								</div>
+								<div class="icon-ship">
+									<i class="fa fa-car"></i>
+								</div>
+							</div>
+						</div>
+						<div class="select-ship">
+							<label style="width: 100%; padding-left: 5px;">Lựa chọn giao hàng</label>
+							<div class="option-ship selected-option-ship" data="1">
+								<div class="ship-fee">
+									<span class="check-box" style="text-align: center; margin-right: 5px;"><i class="fa fa-check-circle" style="color: orange;"></i></span><span class="value">12.000</span><span style="text-decoration-line: underline; ">đ</span>
+								</div>
+								<div class="type-ship" style="margin-left: 17px; color: orange;">Tiêu chuẩn</div>
+								<div class="time-ship" style="margin-left: 17px; color: #00a4bf;">Giao hàng trong vòng 7 ngày</div>
+							</div>
+							<div class="option-ship" data="0">
+								<div class="ship-fee">
+									<span class="check-box" style="text-align: center; margin-right: 5px;"><i class="fa fa-circle" style="color: orange;"></i>
+									</span>
+									<span class="value">30.000</span>
+									<span style="text-decoration-line: underline; ">đ</span>
+								</div>
+								<div class="type-ship" style="margin-left: 17px; color: orange;">Siêu tốc</div>
+								<div class="time-ship" style="margin-left: 17px;color: #00a4bf;">Giao hàng trong vòng 2 ngày</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-product-price">
+						<div class="price">
+							<h3 style="color: orange;">120.000<span style="text-decoration-line: underline; margin-left: 2px;">đ</span></h3>
+						</div>
+						<div class="old-price">
+							<strike>134.000</strike>
+						</div>
+						<div class="save">
+							<h6>-15%</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-right col-lg-4 col-md-4 col-12">
+			<div class="content">
+				<div class="bar-to-pay-btn ">
+					<button type="button" class="bg-button-enable">THANH TOÁN</button>
+				</div>
+				<div class="row-checkout-of-col-right">
+					<div class="row-label">Tạm tính</div><div class="value" id="price-id-add-1">120.000</div>
+				</div>
+				<div class="row-checkout-of-col-right">
+					<div class="row-label">Phí giao hàng</div><div class="value" id="price-id-add-2"></div>
+				</div>
+				<div class="row-checkout-of-col-right">
+					<div class="row-label">Giảm phí giao hàng</div><div class="value" id="price-id-sub-1"><span>-</span>5.000</div>
+				</div>	
+				<div class="row-checkout-of-col-right row-checkout-of-col-right-show">
+					<div class="input-discount-code">
+						<input type="text" name="txt-discount-code" value placeholder="Nhập mã giảm giá">
+					</div>
+					<div class="btn-apply-code">
+						<button type="button">ÁP DỤNG</button>
+					</div>
+				</div>
+				<div class="row-checkout-of-col-right row-checkout-of-col-right-hide" >
+					<div class="row-label">Giảm giá</div><div class="value" id=price-id-sub-2><span>-</span>20.000</div>
+				</div>
+				<div class="row-checkout-of-col-right" >
+					<div class="row-label">Tổng</div><div class="value" id="summany"></div>
+				</div>	
+				<div class="bar-to-pay-btn ">
+					<button type="button" class="bg-button-enable">THANH TOÁN</button>
+				</div>
+			</div>
+		</div>	
+	</div>	
+	<!-- form điền thông tin mua hàng -->
+
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="contact">LIÊN HỆ VỚI VUNGCAOFOOD</div>
+		<div class="sale-contact">NHU CẦU BÁN HÀNG</div>
+	</div>	
+</body>
+</html>

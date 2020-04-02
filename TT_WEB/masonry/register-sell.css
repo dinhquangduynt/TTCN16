@@ -1,0 +1,170 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #fbecfa;
+}
+.container-register-sell{
+	padding-top: 140px;
+	width: 100%;
+	display: inline-block;
+}
+.container-register-sell .content{
+	width: 100%;
+}
+.container-register-sell .content .banner-welcom-to-seller-center{
+	width: 100%;
+	height: 400px;
+}
+.container-register-sell .content .banner-welcom-to-seller-center .carousel
+.carousel-inner .carousel-item{
+    width: 100% !important;
+    height: 400px !important;
+    position: center center;
+}
+.container-register-sell .content .banner-welcom-to-seller-center .carousel .carousel-indicators li{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+.container-register-sell .content .banner-welcom-to-seller-center .carousel .carousel-indicators .active{
+	background-color: orange !important;
+}
+.container-register-sell .content .register-sell-option{
+	width: 90%;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.container-register-sell .content .register-sell-option .sticker-register-now {
+	width: 100%;
+	height: 100px;
+	position: relative;
+	line-height: 100px;
+	
+}
+.container-register-sell .content .register-sell-option .sticker-register-now .draw-sticker-front{
+	width: 100%;
+	height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+    position: absolute;
+    background-color: orange;
+    z-index: 3;
+}
+.container-register-sell .content .register-sell-option .sticker-register-now .draw-sticker-front
+.content-sticker{
+	width: 100%;
+	height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 300%;
+     margin-top: 15px;
+    font-family: cursive;
+    font-weight: bold;
+    color: white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.container-register-sell .content .register-sell-option .sticker-register-now .draw-sticker-back{
+	width: 100%;
+	height: 200px;
+	top :0px;
+	position: absolute;
+	z-index: 2;
+}
+.container-register-sell .content .register-sell-option .sticker-register-now .draw-sticker-back
+.left-draw-sticker-back{
+	width: 5%;
+    height: 145px;
+    background-color: #885c0c;
+    clip-path: polygon(0% 0% , 100% 50%, 100% 100%, 0% 70%);
+}
+.container-register-sell .content .register-sell-option .sticker-register-now .draw-sticker-back
+.right-draw-sticker-back{
+	width: 5%;
+    height: 145px;
+    background-color: #885c0c;
+    clip-path: polygon(0% 0% , 100% 50%, 100% 70%, 0% 100%);
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell{
+	background-image: url(images/background-beautiful.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	width: 90%;
+	background-color: white;
+	box-shadow: 0px -4px 8px 0px black;
+	margin-bottom: 20px;
+	display: table;
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell{
+	float: left;
+	padding: 20px;
+	height: 400px;
+
+	
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell .content-item-register-sell{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #fbecfa;
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell .content-item-register-sell .title-item{
+	width: 100%;
+	text-align: center;
+	font-size: 150%;
+	border-bottom:2px solid white;
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell .content-item-register-sell .list-introduce-about-seller{
+	width: 100%;
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell .content-item-register-sell .list-introduce-about-seller ul{
+	margin-top: 20px;
+	padding-left: 20px;
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell .content-item-register-sell .list-introduce-about-seller ul li{
+	list-style: circle;
+}
+.container-register-sell .content .register-sell-option .list-option-register-sell 
+.item-register-sell .content-item-register-sell .btn-register-now{
+	width: 60%;
+	height: 40px;
+	text-align: center;
+	background-color: orange;
+	margin-top: 20px;
+	border-radius: 10px;
+	line-height: 40px;
+	font-size: 120%;
+	color: white;
+	cursor: pointer;
+}
+@media screen and (max-width: 700px)
+{
+	.container-register-sell{
+		padding-top: 80px;
+	}
+	.container-register-sell .content .banner-welcom-to-seller-center{
+		width: 100%;
+		height: 150px;
+	}
+	.container-register-sell .content .banner-welcom-to-seller-center .carousel
+	.carousel-inner .carousel-item{
+		height: 150px !important;
+	}
+	.container-register-sell .content .register-sell-option .sticker-register-now .draw-sticker-front
+	.content-sticker{
+		font-size: 120%;
+	}
+	.container-register-sell .content .register-sell-option{
+		width:100%;
+	}
+}

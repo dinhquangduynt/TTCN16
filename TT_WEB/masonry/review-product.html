@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>review product</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >  
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="vendor/isotope.pkgd.min.js"></script>
+ 	<script type="text/javascript" src="review-product.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="header.js"></script>
+	<!-- link css và jquery của sweetalert -->
+	<link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+	<!-- ------------------- -->
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="review-product.css">
+ 	<link rel="stylesheet" type="text/css" href="header.css">
+</head>
+<body>
+	<div class="header">
+	  	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;border:none;" >
+				       <span class="menu-icon"><i class="fa fa-bars"></i></span>
+				</button>  
+			  	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				    <ul class="navbar-nav  mx-auto">
+					      <li class="nav-item active">
+					        <a class="nav-link" href="#">Chăm sóc khách hàng<span class="sr-only">(current)</span></a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Bán hàng</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Kiểm tra đơn hàng</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Đăng nhập</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Đăng ký</a>
+					      </li>
+					       <li class="nav-item" style="visibility: hidden;opacity: 0; z-index: 1000;position: fixed; ">
+					        <a class="nav-link" href="#" >Thông tin cá nhân</a>
+					      </li>
+
+				    </ul>
+				</div>
+			</nav>
+			<div class="bar-search">
+				 <div class="logo" id="id-logo">
+				    <a href="index.html" class="home-link" title="Trang chủ"><img src="images/logo_vungcaofood.png" width="100%"> </a>	
+				 </div>
+				 <div class="search-blank  ">
+				 	<div class="child-search-blank mx-auto " >
+				 		<input class="form-search" type="search" placeholder="Tìm kiếm trên VungCaoFood..." >
+				 		<button class="btn-search " type="submit" title="Tìm kiếm">
+				 		<i class="fa fa-search"></i>
+				 		</button>
+				 	</div>
+				 </div>
+				 <span class="cart-box">
+				 	<a href="cart.html">
+				 		<span class="cart" title="Giỏ hàng">				 	
+						 	<i class="fa fa-shopping-cart"></i>
+						 </span>
+						 <span class="num-cart">0</span>
+				 	</a>
+				 </span>
+				 
+			</div>
+			<div class="mini-menu"  >
+				<div class="btn-list-product">
+					<span class="title-of-list-product">Danh mục</span>
+					<span class="icon-of-list-product"><i class="fa fa-angle-down"></i>
+					</span>
+				</div>
+				<div class="mini-sevice-content ">
+					<div class="content mx-auto" >
+						<div class="mini-card-service" title="Liên hệ">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-envelope"></i></span>
+								<span class="title-card">Liên hệ</span>
+							</a>
+						</div>
+						<div class="mini-card-service" title="Đánh giá">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-star"></i></span>
+								<span class="title-card">Đánh giá</span>
+							</a>
+						</div>
+						<div class="mini-card-service" title="Mã giảm giá">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-bookmark"></i></i></i></span>
+								<span class="title-card">Mã giảm giá</span>
+							</a>
+						</div>
+						<div class="mini-card-service" title="Ưu đãi">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-heart"></i></span>
+								<span class="title-card">Ưu đãi</span>
+							</a>
+						</div>	
+					</div>
+				</div>	
+			</div>
+			<div class="vcf-memu-mobile-bottom">
+				<div class="vcf-menu-mobile-item">
+					<a href="index.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-home mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Trang chủ</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-bag mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Mall</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="filterproduct.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-th mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Danh mục</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-user mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Tài khoản</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="cart.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-cart mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Giỏ hàng</div>
+						</div>
+					</a>
+				</div>
+			</div>
+	</div>
+	<!-- tab-list -->
+	<div class="dropdown-sub-menu">
+		<ul class="vcf-list dropdown-sub-menu-level-1">
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="1">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					<li class="vcf-item item-dropdown-sub-menu-level-2" isHover="false">
+						<h6>danh mucj</h6>
+						<ul class="vcf-list dropdown-sub-menu-level-3"></ul>
+					</li>
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="2">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="3">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="4">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="5">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="6">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="7">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="8">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="9">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+		</ul>
+	</div>	
+	<!-- thông tin sản phẩm -->
+	<div class="container-detail-product">
+		<form method="get" action="checkout.html">
+			<div class="detail-product mx-auto">
+				<div class="img-product-review col-lg-4 col-md-12 col-sm-12 float-left">
+					<div class="img-selected mx-auto" style="background-image: url(images/dau-rung.jpg);">
+					</div>
+					<div class="other-img">
+						<ul>
+							<li class="img-clicked">
+								<div class="item" style="background-image: url(images/dau-rung.jpg);" >
+								</div>
+							</li>
+							<li>
+								<div class="item" style="background-image: url(images/Chuoi.jpg);" >
+								</div>
+							</li>
+							<li>
+								<div class="item" style="background-image: url(images/tao-do.jpg);" >
+								</div>
+							</li>
+							<li>
+								<div class="item" style="background-image: url(images/na-đài-loan.jpg);" >
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="infor-product-review col-lg-8 col-md-12 col-sm-12 float-left">
+					<div class="content-infor-product">
+						<!-- dòng hiển thị tiêu đề , tên sản phẩm , giới thiệu ..... -->
+						<div class="describe-product">
+							<h3>[Dâu rừng chín tới]chua ngọt bổ dưỡng, nhìn là thèm , ăn là phê</h3>
+						</div>
+						<!-- dòng hiển thị thông tin đánh giá sản phẩm -->
+						<div class="vote-star" style="width: 95%; height: 25px;">
+							<div class="stars">
+								  <span class="float-left" style="color: #53a6eb; margin-right: 20px;">Đánh giá:</span>
+								  <span>
+								  	<ul >
+									  	<li>
+									  		<i class="list-star-item fa fa-star star-select"></i>
+									  	</li>
+									  	<li>
+									  		<i class="list-star-item fa fa-star star-select"></i>
+									  	</li>
+									  	<li>
+									  		<i class="list-star-item fa fa-star star-select"></i>
+									  	</li>
+									  	<li>
+									  		<i class="list-star-item fa fa-star star-select"></i>
+									  	</li>
+									  	<li>
+									  		<i class="list-star-item fa fa-star"></i>
+									  	</li>
+								  	</ul>
+								  </span>
+								  <span class="total-vote float-left"><h6>(71)</h6></span>
+								  <span class="float-right">
+								  	<span>
+								  		<button  class="share-btn btn-normal" type="button" name="share-btn" title="chia sẻ">
+								  			<i class="fa fa-share"></i>
+								  		</button> 
+								  	</span>
+								  	<span>
+								  		<button class="vote-star-btn btn-normal" type="button" name="vote-star-btn" title="đánh giá">
+								  			<i class="fa fa-heart"></i>
+								  		</button>
+								  	</span>
+								  </span>
+	 						</div>
+						</div>
+						<!-- dong hiển thị thông tin thương hiệu -->
+						<div class="trademark-product float-left" style="width: 95%; height: 50px; border-bottom: 1px solid orange;">
+							<span style="margin-right: 10px; color:#53a6eb ">Thương hiệu: </span>
+							<span style="border-right: 1px solid orange; padding-right: 10px;"><a href="">olala</a></span>
+							<span style="margin-left: 10px;"><a href="">xem thêm sản phẩm của olala</a></span> 
+						</div>
+						<!-- dòng hiển thị giá sản phẩm -->
+						<div class="price-product">
+							<h1 style="color: orange;">30.000 <span style="text-decoration-line: underline;margin-left: 2px; font-size: 90%;">đ</span></h1>
+						</div>
+						<!-- dòng hiển thị giá cũ và số tiền tiết kiệm dc -->
+						<div class="sale-price" style="margin-bottom: 25px;">
+							<h6><span style="margin-right: 10px; color: gray;"><strike>35.000</strike></span><span style="text-decoration: underline; font-size: 90%; color: gray;">đ</span><span style="margin-left: 10px;">-10%</span> </h6>
+						</div>
+						<!-- dòng hiển thị ưu đãi khi mua sản phẩm -->
+						<div class="uu-dai" style="width: 95%; height: 40px; border-bottom: 1px solid orange;">
+							<span class="float-left" style="margin-right: 20px; line-height: 30px; color: gray;">Ưu đãi</span>
+							<div class=" float-left" style="width: 70%;">
+								<div class="bar-uu-dai-piece-1">
+								</div>
+								<div class="bar-uu-dai-piece-2">
+									giảm 80.000 cho đơn hàng trên 300.000
+								</div>
+							</div>
+						</div>
+						<!-- dòng hiển thị nhóm mã màu -->
+						<div class="bar-code-colors" style="margin-top: 20px;">
+							<span class="float-left" style="padding-right: 20px; color: gray;">Mã màu</span>
+							<div class="list-code-color">
+								<ul>
+									<li>
+										<div class="cell-code-color" style="width: 30px; height: 30px; margin-right: 10px; background-color: orange; border: 1px solid blue;">
+										</div>
+									</li>
+									<li>
+										<div class="cell-code-color" style="width: 30px; height: 30px; margin-right: 10px; background-color: blue; border: 1px solid blue;">
+										</div>
+									</li>
+									<li>
+										<div class="cell-code-color" style="width: 30px; height: 30px; margin-right: 10px; background-color: green; border: 1px solid blue;">
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- dòng hiển thị tùy chọn kính thước -->
+						<div class="bar-size float-left" style="margin-top: 20px;">
+							<span class="float-left" style="padding-right: 20px; color: gray; ">Kích cỡ</span>
+							<div class="list-size">
+								<ul>  <!-- danh sách kích thước sản phẩm -->
+									<li>
+										<div class="cell-size" style="width: 40px; height: 30px; margin-right: 10px;  border: 1px solid orange;">
+											M
+										</div>
+									</li>
+									<li>
+										<div class="cell-size" style="width: 40px; height: 30px; margin-right: 10px;  border: 1px solid orange;">
+											ML
+										</div>
+									</li>
+									<li>
+										<div class="cell-size" style="width: 40px; height: 30px; margin-right: 10px;  border: 1px solid orange;">
+											XL
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<script type="text/javascript">
+							$(function(){
+								var uuDai= true;
+								if (uuDai==false) {
+									$('.bar-size').hide();	
+								}
+							})
+						</script>
+						<!-- dòng hiển thị thanh tùy chọn số lượng và kích cỡ màu sắc -->
+						<div class="bar-option-num-product float-left" style="width: 100%; height: 40px; line-height: 40px;">
+							<span>
+								<span style="margin-right: 20px; color: gray;">Số lượng</span>
+								<span>
+									<button type="button" id="btn-sub-num-p" style="cursor:pointer; color: gray;"><i class="fa fa-minus" style="font-size: 150%;"></i></button>
+								</span>
+								<span  class="num-p" style="color: #095764; font-size: 150%; width: 20px; text-align: center; font-weight: bold;">1</span>
+								<span>
+									<button type="button" id="btn-add-num-p" style="cursor: pointer;"><i class="fa fa-plus" style="font-size: 150%;"></i></button>
+								</span>
+							</span>
+						</div>	
+						<!-- dòng hiển thị nút thêm vào giỏ hàng và mua hàng -->
+						<div class="btn-add-and-buy float-left" style="width: 100%;height: 50px; ">
+							<span>
+								<button type="button" id="btn-add-into-cart" class="btn-add-into-cart btn-large-size" style="height: 100%; background-color: darkorange; color: white;border-radius: 5px;">THÊM VÀO GIỎ HÀNG</button>
+							</span>
+							<!-- phần thông báo đã thêm sản phẩm vào giỏ hàng  -->
+							<span>
+								<button type="submit" id="btn-buy-now" class="btn-buy-now btn-large-size" style="height: 100%; background-color: orange; color: white;border-radius: 5px;">MUA NGAY</button>
+							</span>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</form>		
+	</div>
+    <!-- phần mô tả chi tiết sản phẩm -->
+    <div class="container-description col-lg-10 col-md-10 col-sm-12 col-12">
+    	<div class="bar-description mx-auto" >
+    		<ul class="list-description">
+			  <li class="description-item col-lg-4 col-md-4 col-sm-4 col-4" style=" border-right: 3px solid orange;">
+			    Mô tả sản phẩm
+			  </li>
+			  <li class="description-item col-lg-4 col-md-4 col-sm-4 col-4">
+			    Thông số sản phẩm
+			  </li>
+			  <li class="description-item description-item-selected col-lg-4 col-md-4 col-sm-4 col-4" style="border-left: 3px solid orange;">
+			    Đánh giá và hỏi đáp
+			  </li>
+			</ul>
+    	</div>
+    	<div class="description-content ">
+    		<ul class=" ul-item mx-auto">
+    			<li class="li-item" >
+    				<div class="tab-description">
+    					<div class="description-product">
+    						<!-- nội dung bên trong thẻ A -->
+    						<script type="text/javascript">
+    							$(function(){
+    								    var render= '<b>Tên khác: </b>Cho em muôn trượng hào quang,&nbsp;Quân tử báo ân<b><br>Thể loại: </b>Ngôn tình, hiện đại<br><br>Đã 27 tuổi nhưng đại thiếu gia Lục thị lại chẳng hề rung động vì bất kỳ một cô gái nào nên cha mẹ cùng em trai đã chuốc say anh rồi đưa lên giường một cô gái xa lạ.<br>5 năm sau, tiểu thiếu gia&nbsp;Lục Kình Vũ&nbsp;vì không có mẹ và cú shock quá khứ nên đã rơi vào trầm cảm.<br><p><img src="images/Chuoi.jpg"></p><br>Một người cha "chưa từng có cảm giác rung động trước bất kỳ ai" và một thằng bé con "không thích tiếp xúc với bất kỳ ai" đã trở nên "lầy lội" hơn bao giờ hết khi gặp được Ninh Tịch. Cả hai cha con đều vừa gặp đã yêu người phụ nữ này, một người mong muốn chiếm hữu, một người vô cùng ỷ lại, cuối cùng tạo ra những tình huống dở khóc dở cười cho độc giả.<p><img src="images/Chuoi.jpg"></p><br>Một người cha "chưa từng có cảm giác rung động trước bất kỳ ai" và một thằng bé con "không thích tiếp xúc với bất kỳ ai" đã trở nên "lầy lội" hơn bao giờ hết khi gặp được Ninh Tịch. Cả hai cha con đều vừa gặp đã yêu người phụ nữ này, một người mong muốn chiếm hữu, một người vô cùng ỷ lại, cuối cùng tạo ra những tình huống dở khóc dở cười cho độc giả.';
+	    								$('.description-product').html(render);
+	    							})
+    						</script>
+    					</div>
+    				</div>
+    			</li>
+    			<li class="li-item">
+    				<div class="tab-description">
+    					<div class="attribute-product">
+    						<table class="table mx-auto">
+							  <thead class="thead-dark">
+							    <tr>
+							      <th scope="col">#</th>
+							      <th scope="col">Thuộc tính</th>
+							      <th scope="col">Thông số</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>dài x rộng x cao</td>
+							      <td>20x30x40</td>							
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>chất liệu</td>
+							      <td>thép</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td>tải trọng</td>
+							      <td>25 kg</td>
+							    </tr>
+							  </tbody>
+							</table>
+    					</div>
+    				</div>
+    			</li>
+    			<li class="li-item">
+    				<div class="tab-description  show-tab">
+    					<div class="comment-product">
+    						<div class="bar-detail-rating mx-auto">
+    								<div class="left">
+    									<div class="mx-auto" style="width: 90%;">
+    										<div class="score">
+    									     <h1>4/5</h1>
+		    								</div>
+		    								<div class="stars" style=" height: 50px; font-size:200%; ">
+		    									<ul>
+		    										<li>
+		    											<i class="fa fa-star star-select"></i>
+		    										</li>
+		    										<li>
+		    											<i class="fa fa-star star-select"></i>
+		    										</li>
+		    										<li>
+		    											<i class="fa fa-star star-select"></i>
+		    										</li>
+		    										<li>
+		    											<i class="fa fa-star star-select"></i>
+		    										</li>
+		    										<li>
+		    											<i class="fa fa-star"></i>
+		    										</li>
+		    									</ul>
+		    								</div>
+		    								<div class="count">
+		    									<h6>20 lượt đánh giá</h6>
+		    								</div>
+    									</div>
+	    							</div>
+	    							<div class="right">
+	    								<table>
+	    									<tbody>
+	    										<!-- dòng 1 sao  -->
+	    										<tr>
+	    											<td>
+	    												<div class="stars" style="width: 100px;">
+				    										<ul>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star "></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    										</ul>
+	    												</div>
+	    											</td>
+	    											<td>
+	    												<div class="progress">
+														  <div class="progress-bar" role="progressbar" style="width: 10%"></div>
+														</div>
+	    											</td>
+	    											<td>
+	    												<span>
+	    													<h6>2</h6>
+	    												</span>
+	    											</td>
+	    										</tr>
+	    										<!-- dòng 2 sao -->
+	    										<tr>
+	    											<td>
+	    												<div class="stars" style="width: 100px;">
+				    										<ul>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select "></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    										</ul>
+	    												</div>
+	    											</td>
+	    											<td>
+	    												<div class="progress">
+														  <div class="progress-bar" role="progressbar" style="width: 15%"></div>
+														</div>
+	    											</td>
+	    											<td>
+	    												<span>
+	    													<h6>2</h6>
+	    												</span>
+	    											</td>
+	    										</tr>
+	    										<!-- dòng 3 sao  -->
+	    										<tr>
+	    											<td>
+	    												<div class="stars" style="width: 100px;">
+				    										<ul>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    										</ul>
+	    												</div>
+	    											</td>
+	    											<td>
+	    												<div class="progress">
+														  <div class="progress-bar" role="progressbar" style="width: 25%"></div>
+														</div>
+	    											</td>
+	    											<td>
+	    												<span>
+	    													<h6>2</h6>
+	    												</span>
+	    											</td>
+	    										</tr>
+	    										<!-- dòng 4 sao -->
+	    										<tr>
+	    											<td>
+	    												<div class="stars" style="width: 100px;">
+				    										<ul>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star"></i>
+				    											</li>
+				    										</ul>
+	    												</div>
+	    											</td>
+	    											<td>
+	    												<div class="progress">
+														  <div class="progress-bar" role="progressbar" style="width: 30%" ></div>
+														</div>
+	    											</td>
+	    											<td>
+	    												<span>
+	    													<h6>2</h6>
+	    												</span>
+	    											</td>
+	    										</tr>
+	    										<!-- dòng 5 sao -->
+	    										<tr>
+	    											<td>
+	    												<div class="stars" style="width: 100px;">
+				    										<ul>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    											<li>
+				    												<i class="fa fa-star star-select"></i>
+				    											</li>
+				    										</ul>
+	    												</div>
+	    											</td>
+	    											<td>
+	    												<div class="progress">
+														  <div class="progress-bar" role="progressbar" style="width: 20%"></div>
+														</div>
+	    											</td>
+	    											<td>
+	    												<span>
+	    													<h6>2</h6>
+	    												</span>
+	    											</td>
+	    										</tr>
+	    									</tbody>
+	    								</table>
+	    							</div>
+    						</div>
+    						<div class="comment-content">
+    							<!-- thanh tiêu đề và lọc đánh giá -->
+    							<table border="2" style="width: 100%; height: 50px; margin-bottom: 40px; color: orange;">
+    								<tr>
+    									<th style="width: 50%;">Nhận xét về sản phẩm</th>
+    									<th style="width: 25%;">1</th>
+    									<th style="width: 25%;">1</th>
+    								</tr>
+    							</table>
+    							<div class="list-comment">
+    								<ul>
+    									<li class="item">
+    										<div class="line-comment">
+    											<div class="stars">
+    												<ul>
+    													<li>
+    														<i class="fa fa-star star-select"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star star-select"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star"></i>
+    													</li>
+    												</ul>
+    											</div>
+    											<div class="user-comment-info">
+    												<span class="who-commented">
+    													<span style="margin-right: 5px">Bởi:</span><span class="user-name" style="margin-right: 20px; color: orange;">Trần Ngọc Hiếu</span>
+    												</span>
+    												<span style="color: green; font-weight: bold;">
+    													<span>
+    														<i class="fa fa-check-circle" style="margin-right: 5px;">
+    														</i>
+    													</span>xác nhận đã nhận hàng
+    												</span>
+    												<span class="time-comment float-right">
+    													<span id="number">11</span>
+    													<span style="margin-left: 5px;" id="date-month-year">ngày trước
+    													</span>
+    												</span>
+    											</div>
+    											<div class="content">
+    												<div class="text">
+    													hàng đẹp như hình, giao hàng nhanh cho hẳn 2 sao :V
+    												</div>
+    												<div class="list-img-comment" style="display: inline-table;">
+    													<div class="img-comment" style="background-image: url(images/Chuoi.jpg); ">
+	    												</div>
+	    												<div class="img-comment" style="background-image: url(images/Chuoi.jpg); ">
+	    												</div>
+	    												<div class="img-comment" style="background-image: url(images/Chuoi.jpg); ">
+	    												</div>
+    												</div>
+    											</div>
+    											<span class="bar-like" >
+    												<span>
+    													<button type="button" id="btn-like"><i class="fa fa-thumbs-up"></i></button>
+    												</span>
+    												<span id="number-like">2</span>
+    											</span>
+    										</div>
+    									</li>
+    									<li class="item">
+    										<div class="line-comment">
+    											<div class="stars">
+    												<ul>
+    													<li>
+    														<i class="fa fa-star star-select"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star star-select"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star"></i>
+    													</li>
+    													<li>
+    														<i class="fa fa-star"></i>
+    													</li>
+    												</ul>
+    											</div>
+    											<div class="user-comment-info">
+    												<span class="who-commented">
+    													<span style="margin-right: 5px">Bởi:</span><span class="user-name" style="margin-right: 20px; color: orange;">Trần Ngọc Hiếu</span>
+    												</span>
+    												<span style="color: green; font-weight: bold;">
+    													<span>
+    														<i class="fa fa-check-circle" style="margin-right: 5px;">
+    														</i>
+    													</span>xác nhận đã nhận hàng
+    												</span>
+    												<span class="time-comment float-right">
+    													<span id="number">11</span>
+    													<span style="margin-left: 5px;" id="date-month-year">ngày trước
+    													</span>
+    												</span>
+    											</div>
+    											<div class="content">
+    												<div class="text">
+    													hàng đẹp như hình, giao hàng nhanh cho hẳn 2 sao :V
+    												</div>
+    												<div class="list-img-comment" style="display: inline-table;">
+    													<!-- <div class="img-comment" style="background-image: url(images/Chuoi.jpg); ">
+	    												</div>
+	    												<div class="img-comment" style="background-image: url(images/Chuoi.jpg); ">
+	    												</div>
+	    												<div class="img-comment" style="background-image: url(images/Chuoi.jpg); ">
+	    												</div> -->
+    												</div>
+    											</div>
+    											<span class="bar-like" >
+    												<span>
+    													<button type="button" id="btn-like"><i class="fa fa-thumbs-up"></i></button>
+    												</span>
+    												<span id="number-like">2</span>
+    											</span>
+    										</div>
+    									</li>
+    								</ul>
+    							</div>
+    							<div class="question-about-product">
+    								<div>
+    									<h3>Phần hỏi đáp về sản phẩm</h3>
+    								</div>
+    								<div class="area-input-question">
+    									<table style="width: 100%; height: 100%;">
+    										<tr>
+    											<td style="width: 90%; height: 100%;">
+    												<span class="input-txt">
+				    									<input type="text" name="question-txt" placeholder="Nhập câu hỏi tại đây">
+				    								</span>
+    											</td>
+    											<td style="width: 10%; height: 100%;">
+    												<span class="btn-send">
+					    								<button type="button"><i class="fa fa-paper-plane"></i></button>
+					    							</span>
+    											</td>
+    										</tr>
+    									</table>	
+	    							</div>
+	    							<div class="list-question" style="width: 100%;">
+	    								<ul>
+	    									<li class="question-item">
+	    										<div class="question">
+	    											<div class="infor-user">
+		    											<span class="icon"><i class="fa fa-comment"></i></span>
+		    											<span class="user-name">Trần Ngọc Hiếu</span>
+		    											<span class="action">đã đặt câu hỏi</span>
+		    										</div>
+		    										<div class="content" id="content">
+		    											có size nào to hơn nữa không shop?
+		    										</div>	
+	    										</div>
+	    										<div class="answer">
+	    											<div class="infor-user">
+		    											<span class="icon"><i class="fa fa-comment"></i></span>
+		    											<span class="user-name">olala shop</span>
+		    											<span class="action">đã trả lời</span>
+		    										</div>
+		    										<div class="content" id="content">
+		    											size đó là to nhất rồi đó bạn
+		    										</div>	
+	    										</div>
+	    									</li>
+	    									<li class="question-item">
+	    										<div class="question">
+	    											<div class="infor-user">
+		    											<span class="icon"><i class="fa fa-comment"></i></span>
+		    											<span class="user-name">Trần Ngọc Hiếu</span>
+		    											<span class="action">đã đặt câu hỏi</span>
+		    										</div>
+		    										<div class="content" id="content">
+		    											thấy mấy shop khác có nhưng mà đắt quá
+		    										</div>	
+	    										</div>
+	    										<div class="answer">
+	    											<div class="infor-user">
+		    											<span class="icon"><i class="fa fa-comment"></i></span>
+		    											<span class="user-name">olala shop</span>
+		    											<span class="action">đã trả lời</span>
+		    										</div>
+		    										<div class="content" id="content">
+		    											shop sẽ nhập sản phẩm về sớm ạ, mong bạn thông cảm
+		    										</div>	
+	    										</div>
+	    									</li>
+	    									<li class="question-item">
+	    										<div class="question">
+	    											<div class="infor-user">
+		    											<span class="icon"><i class="fa fa-comment"></i></span>
+		    											<span class="user-name">Trần Ngọc Hiếu</span>
+		    											<span class="action">đã đặt câu hỏi</span>
+		    										</div>
+		    										<div class="content" id="content">
+		    											ok
+		    										</div>	
+	    										</div>
+	    										<div class="answer">
+	    											<div class="infor-user">
+		    											<span class="icon"><i class="fa fa-comment"></i></span>
+		    											<span class="user-name">olala shop</span>
+		    											<span class="action">đã trả lời</span>
+		    										</div>
+		    										<div class="content" id="content">
+		    											cảm ơn bạn đã quan tâm ạ <3
+		    										</div>	
+	    										</div>
+	    									</li>
+	    								</ul>
+	    							</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</li>
+    		</ul>
+    	</div>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('.description-item').on("click", function(){
+    				$('.description-item').removeClass('description-item-selected');
+    				$(this).addClass('description-item-selected');
+    				var x= $(this).index();
+    				x= x+1;
+    				console.log(x);
+    				$('.description-content ul li .tab-description').removeClass('show-tab');
+    				$('.description-content ul li:nth-child('+x+') .tab-description').addClass('show-tab');
+    			});
+    		})
+    	</script>
+    </div>
+	<!-- sản phẩm liên quan -->
+	<div class="list-product-result"  >
+		<div class="title">
+			<H3>Sản phẩm liên quan</H3>
+		</div>
+		<div class="content mx-auto">
+			
+			<a href="review-product.html" style="color: black;">
+				<div class="item-result-product col-lg-2 col-md-3 col-sm-4 col-6">
+ 					<div class="content-product">
+ 						<div class="img-product-content" style="background-image: url(images/Chuoi.jpg);">
+ 						</div>
+ 						<div class="name-product">
+ 							<h5>Chuối và hương</h5>
+ 						</div>
+ 						<div class="price-product" style="color: #ff8100 ">
+ 							<span class="float-left" style="line-height: 40px">đ</span>
+ 							<h3>25.000</h3>
+ 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+ 						</div>
+ 						<div class="stars">
+							  <ul >
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star"></i>
+							  	</li>
+							  </ul>
+							  <div class="total-vote"><h6>(71)</h6></div>
+ 						</div>
+ 					</div>
+				</div>
+			</a>
+			<a href="review-product.html" style="color: black;">
+				<div class="item-result-product col-lg-2 col-md-3 col-sm-4 col-6">
+ 					<div class="content-product">
+ 						<div class="img-product-content" style="background-image: url(images/dau-rung.jpg);">
+ 						</div>
+ 						<div class="name-product">
+ 							<h5>Dâu rừng</h5>
+ 						</div>
+ 						<div class="price-product" style="color: #ff8100 ">
+ 							<span class="float-left" style="line-height: 40px">đ</span>
+ 							<h3>25.000</h3>
+ 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+ 						</div>
+ 						<div class="stars">
+							  <ul >
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star"></i>
+							  	</li>
+							  </ul>
+							  <div class="total-vote"><h6>(71)</h6></div>
+ 						</div>
+ 					</div>
+				</div>
+			</a>
+			<a href="review-product.html" style="color: black;">
+				<div class="item-result-product col-lg-2 col-md-3 col-sm-4 col-6">
+ 					<div class="content-product">
+ 						<div class="img-product-content" style="background-image: url(images/tao-do.jpg);">
+ 						</div>
+ 						<div class="name-product">
+ 							<h5>Táo đỏ</h5>
+ 						</div>
+ 						<div class="price-product" style="color: #ff8100 ">
+ 							<span class="float-left" style="line-height: 40px">đ</span>
+ 							<h3>25.000</h3>
+ 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+ 						</div>
+ 						<div class="stars">
+							  <ul >
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star"></i>
+							  	</li>
+							  </ul>
+							  <div class="total-vote"><h6>(71)</h6></div>
+ 						</div>
+ 					</div>
+				</div>
+			</a>
+			<a href="review-product.html" style="color: black;">
+				<div class="item-result-product col-lg-2 col-md-3 col-sm-4 col-6">
+ 					<div class="content-product">
+ 						<div class="img-product-content" style="background-image: url(images/na-đài-loan.jpg);">
+ 						</div>
+ 						<div class="name-product">
+ 							<h5>Na rừng</h5>
+ 						</div>
+ 						<div class="price-product" style="color: #ff8100 ">
+ 							<span class="float-left" style="line-height: 40px">đ</span>
+ 							<h3>25.000</h3>
+ 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+ 						</div>
+ 						<div class="stars">
+							  <ul >
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star"></i>
+							  	</li>
+							  </ul>
+							  <div class="total-vote"><h6>(71)</h6></div>
+ 						</div>
+ 					</div>
+				</div>
+			</a>
+			<a href="review-product.html" style="color: black;">
+				<div class="item-result-product col-lg-2 col-md-3 col-sm-4 col-6">
+ 					<div class="content-product">
+ 						<div class="img-product-content" style="background-image: url(images/Chuoi.jpg);">
+ 						</div>
+ 						<div class="name-product">
+ 							<h5>Chuối và hương</h5>
+ 						</div>
+ 						<div class="price-product" style="color: #ff8100 ">
+ 							<span class="float-left" style="line-height: 40px">đ</span>
+ 							<h3>25.000</h3>
+ 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+ 						</div>
+ 						<div class="stars">
+							  <ul >
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star"></i>
+							  	</li>
+							  </ul>
+							  <div class="total-vote"><h6>(71)</h6></div>
+ 						</div>
+ 					</div>
+				</div>
+			</a>
+			<a href="review-product.html" style="color: black;">
+				<div class="item-result-product col-lg-2 col-md-3 col-sm-4 col-6">
+ 					<div class="content-product">
+ 						<div class="img-product-content" style="background-image: url(images/Chuoi.jpg);">
+ 						</div>
+ 						<div class="name-product">
+ 							<h5>Chuối và hương</h5>
+ 						</div>
+ 						<div class="price-product" style="color: #ff8100 ">
+ 							<span class="float-left" style="line-height: 40px">đ</span>
+ 							<h3>25.000</h3>
+ 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+ 						</div>
+ 						<div class="stars">
+							  <ul >
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star star-select"></i>
+							  	</li>
+							  	<li>
+							  		<i class="list-star-item fa fa-star"></i>
+							  	</li>
+							  </ul>
+							  <div class="total-vote"><h6>(71)</h6></div>
+ 						</div>
+ 					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<div class="contact">LIÊN HỆ VỚI VUNGCAOFOOD</div>
+		<div class="sale-contact">NHU CẦU BÁN HÀNG</div>
+	</div>	
+</body>
+</html>

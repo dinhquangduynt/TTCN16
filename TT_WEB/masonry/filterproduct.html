@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sản phẩm</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="vendor/isotope.pkgd.min.js"></script>
+ 	<script type="text/javascript" src="filterproduct.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="header.js"></script>
+	<!-- link css và jquery của sweetalert -->
+	<link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+	<!-- ------------------- -->
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="filterproduct.css">
+ 	<link rel="stylesheet" type="text/css" href="header.css">
+
+ 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+<body>
+	<div class="header">
+  	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;border:none;" >
+			       <span class="menu-icon"><i class="fa fa-bars"></i></span>
+			</button>  
+		  	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			    <ul class="navbar-nav  mx-auto">
+				      <li class="nav-item active">
+				        <a class="nav-link" href="#">Chăm sóc khách hàng<span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Bán hàng</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Kiểm tra đơn hàng</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Đăng nhập</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Đăng ký</a>
+				      </li>
+				       <li class="nav-item" style="visibility: hidden;opacity: 0; z-index: 1000;position: fixed; ">
+				        <a class="nav-link" href="#" >Thông tin cá nhân</a>
+				      </li>
+
+			    </ul>
+			</div>
+		</nav>
+		<div class="bar-search">
+			 <div class="logo" id="id-logo">
+			    <a href="index.html" class="home-link" title="Trang chủ"><img src="images/logo_vungcaofood.png" width="100%"> </a>	
+			 </div>
+			 <div class="search-blank  ">
+			 	<div class="child-search-blank mx-auto " >
+			 		<input class="form-search" type="search" placeholder="Tìm kiếm trên VungCaoFood..." >
+			 		<button class="btn-search " type="submit" title="Tìm kiếm">
+			 		<i class="fa fa-search"></i>
+			 		</button>
+			 	</div>
+			 </div>
+			 <span class="cart-box">
+			 	<a href="cart.html">
+			 		<span class="cart" title="Giỏ hàng">				 	
+					 	<i class="fa fa-shopping-cart"></i>
+					 </span>
+					 <span class="num-cart">0</span>
+			 	</a>
+			 </span>			 
+		</div>
+		<div class="mini-menu"  >
+			<div class="btn-list-product">
+				<span class="title-of-list-product">Danh mục</span>
+				<span class="icon-of-list-product"><i class="fa fa-angle-down"></i>
+				</span>
+			</div>
+			<div class="mini-sevice-content ">
+				<div class="content mx-auto" >
+					<div class="mini-card-service" title="Liên hệ">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-envelope"></i></span>
+							<span class="title-card">Liên hệ</span>
+						</a>
+					</div>
+					<div class="mini-card-service" title="Đánh giá">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-star"></i></span>
+							<span class="title-card">Đánh giá</span>
+						</a>
+					</div>
+					<div class="mini-card-service" title="Mã giảm giá">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-bookmark"></i></i></i></span>
+							<span class="title-card">Mã giảm giá</span>
+						</a>
+					</div>
+					<div class="mini-card-service" title="Ưu đãi">	
+						<a href="#">
+							<span class="card-icon"><i class="fa fa-heart"></i></span>
+							<span class="title-card">Ưu đãi</span>
+						</a>
+					</div>	
+				</div>
+			</div>	
+		</div>
+		<div class="vcf-memu-mobile-bottom">
+				<div class="vcf-menu-mobile-item">
+					<a href="index.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-home mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Trang chủ</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-bag mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Mall</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="filterproduct.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-th mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Danh mục</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-user mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Tài khoản</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="cart.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-cart mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Giỏ hàng</div>
+						</div>
+					</a>
+				</div>
+			</div>
+	</div>
+	<!-- tab-list -->
+	<div class="dropdown-sub-menu">
+		<ul class="vcf-list dropdown-sub-menu-level-1">
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="1">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					<li class="vcf-item item-dropdown-sub-menu-level-2" isHover="false">
+						<h6>danh mucj</h6>
+						<ul class="vcf-list dropdown-sub-menu-level-3"></ul>
+					</li>
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="2">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="3">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="4">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="5">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="6">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="7">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="8">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="9">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- phần thân trang lọc -->
+	<div class="vcf-filter-product-container">
+		<div class="vcf-filter-product-content mx-auto">
+			<div class="vcf-link-type-product">
+				<ul class="breadcrum-list">
+					<li>
+						<span class="breadcrum-item">
+							<a href="index.html" class="breadcrum-item-text-root" title="Trang chủ">
+								<span>Trang chủ</span>
+							</a>
+							<span ><i class="fa fa-angle-right"></i></span>
+						</span>
+					</li>
+					<li>
+						<span class="breadcrum-item">
+							<a href="filterproduct.html" class="breadcrum-item-text-node" title="Trang chủ">
+								<span>Ngành hàng</span>
+							</a>
+							<span ><i class="fa fa-angle-right"></i></span>
+						</span>
+					</li>
+					<li>
+						<span class="breadcrum-item">
+							<a href="filterproduct.html" class="breadcrum-item-text-node" title="Trang chủ">
+								<span>Loại sản phẩm</span>
+							</a>
+							<span ><i class="fa fa-angle-right"></i></span>
+						</span>
+					</li>
+					<li>
+						<span class="breadcrum-item">
+							<a href="filterproduct.html" class="breadcrum-item-text-leaf" title="Trang chủ">
+								<span>Sản phẩm</span>
+							</a>
+
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="list-type-product">
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class=" col-lg-2 col-md-3 col-xs-4 col-6">
+					<div class="item-type-product ">
+						<div class="content">
+							<div class="img-item-type-product mx-auto" style="background-image: url(images/vcf.jpg);">
+							
+							</div>
+							<div class="name-item-type-product">
+								Nồi cơm điện
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('.vcf-filter-product-content .list-type-product').flickity({
+						cellAlign: 'left',
+						 contain: true,
+						 groupCells: true
+					})
+				})
+			</script>
+			<div class="detail-filter-product-container mx-auto">
+				<!-- cột bên trái -->
+				<div class="col-detail-filter-product-container-left">
+					<!-- list danh mục liên quan -->
+					<div class="btn-show-mobile-menu" title="" menuStatus="hide">
+						<i class="fa fa-angle-right"></i>
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							$('.btn-show-mobile-menu').on("click", function(){
+								if($(this).attr('menuStatus')==="hide")
+								{
+									$(this).parent().css({'left':'0px'});
+									$(this).css({'left':'300px'});
+									$(this).attr({'menuStatus':'show'});
+									$(this).children('i').removeClass('fa-angle-right');
+									$(this).children('i').addClass('fa-angle-left');
+								}
+								else
+								{
+									$(this).parent().css({'left':'-300px'});
+									$(this).css({'left':'0px'});
+									$(this).attr({'menuStatus':'hide'});
+									$(this).children('i').removeClass('fa-angle-left');
+									$(this).children('i').addClass('fa-angle-right');
+								}
+							})
+						})
+					</script>
+					<div class="list-related-categories">
+						<h5>Danh muc liên quan</h5>
+						<ul class="list-content">
+							<a href="" class="vcf-link-show"><li class="list-item">nồi cơm điện</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">ấm đun nước</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">tủ lạnh</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">bếp điện</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">quạt điện</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">ti vi</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">máy giặt</li></a>
+							<a href="" class="vcf-link-show"><li class="list-item">loa đài</li></a>
+							<a href="" class="vcf-link-hide"><li class="list-item">nồi cơm điện</li></a>
+							<a href="" class="vcf-link-hide"><li class="list-item">nồi cơm điện</li></a>
+							<a href="" class="vcf-link-hide"><li class="list-item">nồi cơm điện</li></a>
+							<a href="" class="vcf-link-hide"><li class="list-item">nồi cơm điện</li></a>
+							<a href="" class="vcf-link-hide"><li class="list-item">nồi cơm điện</li></a>
+						</ul>
+						<div class="show-more-btn" statusCLick="0">hiển thị thêm</div>
+						<script type="text/javascript">
+							$(document).ready(function () {
+								$('.show-more-btn').on("click", function(){
+									var list= $('.list-content a');
+									var length= list.length;
+									var check= $(this).attr('statusCLick');
+									if(check=='0'){
+										for(i=8; i<length; i++)
+										{
+											if($(list[i]).hasClass('vcf-link-hide'))
+											{
+												$(list[i]).removeClass('vcf-link-hide');
+												$(list[i]).addClass('vcf-link-show');
+											}
+											$(this).attr({'statusCLick':'1'});
+										}
+										$(this).text('ẩn bớt');
+									}
+									else{
+										for(i=8; i<length; i++)
+										{
+											if($(list[i]).hasClass('vcf-link-show'))
+											{
+												$(list[i]).removeClass('vcf-link-show');
+												$(list[i]).addClass('vcf-link-hide');
+											}
+											$(this).attr({'statusCLick':'0'});
+										}
+										$(this).text('hiển thị thêm');
+									}
+									
+
+								})
+							})
+						</script>
+					</div>
+					<div class="list-option-trademark">
+						<h5>Thương hiệu</h5>
+						<div class="item-option-trademark">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-trademark">shape</span>
+							</div>
+						</div>
+						<div class="item-option-trademark">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-trademark">shape</span>
+							</div>
+						</div>
+						<div class="item-option-trademark">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-trademark">shape</span>
+							</div>
+						</div>
+						<div class="item-option-trademark">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-trademark">shape</span>
+							</div>
+						</div>
+						<div class="item-option-trademark">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-trademark">shape</span>
+							</div>
+						</div>
+						<div class="item-option-trademark">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-trademark">shape</span>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							$('.item-option-trademark .checkbox-item-option .checkbox-vcf input').on("change", function (){
+								var check=$(this).prop('checked');
+								var root= $(this).parent().parent().children('.name-trademark');
+								if(check)
+								{
+									root.css({'color':'orange'});
+								}
+								else
+								{
+									root.css({'color':'#095764'});
+								}
+								
+							})
+						})
+					</script>
+					<div class="select-the-national-regon">
+						<h5>Khu vực</h5>
+						<div class="item-option-national-regon">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-national-regon">Trong nước</span>
+							</div>
+						</div>
+						<div class="item-option-national-regon">
+							<div class="checkbox-item-option">
+								<span class="checkbox-vcf">
+								 	<input type="checkbox" name="checkbox-vcf" value="share">
+								</span>
+								<span class="name-national-regon">Nước ngoài</span>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							$('.item-option-national-regon .checkbox-item-option .checkbox-vcf input').on("click", function (){
+								var check=$(this).prop('checked');
+								var root= $(this).parent().parent().children('.name-trademark');
+								if(check)
+								{
+									$('.item-option-national-regon .checkbox-item-option .checkbox-vcf input').prop('checked',false);
+									$(this).prop('checked',true);
+									root.css({'color':'orange'});
+									console.log('1');
+								}
+								else
+								{
+									root.css({'color':'#095764'});
+									console.log('0');
+								}								
+							})
+						})
+					</script>
+					<div class="option-range-price">
+						<h5>Giá</h5>
+						<div class="field-input-range-price">
+							<div class="txt-input input-min-price">
+								<input type="text" name="txtMinPrice" placeholder="Tối thiểu" value="" id="txt-min-price">
+							</div>
+							<div class="txt-input input-max-price">
+								<input type="text" name="txtMaxPrice" placeholder="Tối đa" value="" id="txt-max-price">
+							</div>
+							<div class="btn-input btn-filter-range-price">
+								<button type="button" id="btn-filter-range-price">TÌM KIẾM</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- cột bên phải -->
+				<div class="col-detail-filter-product-container-right">
+					<div class="row-action-filter">
+						<h2 class="header-title-product">
+							Nồi cơm điện
+						</h2>
+						<div class="num-product-result">
+							<span class="num-pr-value">12.000</span><span style="margin-left:5px; ">sản phẩm</span>
+						</div>
+						<div class="select-sort-product">
+							<span class="label">Sắp xếp theo</span>
+							<span class="select">
+								<select>
+									<option>Độ phổ biến</option>
+									<option>Giá từ cao đến thấp</option>
+									<option>Giá từ thấp đến cao</option>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row-result-product">
+						<div class="content mx-auto">
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/cooking-rice.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Nồi cơm điện</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>1.225.000</h3>
+				 							<h6 style="color: gray"><strike>1.300.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/toshiba-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Nồi cơm đa năng toshiba alooo Nồi cơm đa năng toshiba alooo</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/share-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Chuối và hương</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/hitachi-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Chuối và hương</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/cooking-rice.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Nồi cơm điện</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>1.225.000</h3>
+				 							<h6 style="color: gray"><strike>1.300.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/toshiba-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Nồi cơm đa năng toshiba</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/share-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Chuối và hương</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/hitachi-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Chuối và hương</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/cooking-rice.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Nồi cơm điện</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>1.225.000</h3>
+				 							<h6 style="color: gray"><strike>1.300.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/toshiba-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Nồi cơm đa năng toshiba</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/share-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Chuối và hương</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+
+							<a href="review-product.html" style="color: black;">
+								<div class="item-result-product col-lg-3 col-md-4 col-sm-6 col-6">
+				 					<div class="content-product">
+				 						<div class="img-product-content" style="background-image: url(images/hitachi-cook.jpg);">
+				 						</div>
+				 						<div class="name-product">
+				 							<h5>Chuối và hương</h5>
+				 						</div>
+				 						<div class="price-product" style="color: #ff8100 ">
+				 							<span class="float-left" style="line-height: 40px">đ</span>
+				 							<h3>25.000</h3>
+				 							<h6 style="color: gray"><strike>30.000</strike> -16%</h6>
+				 						</div>
+				 						<div class="stars">
+											  <ul >
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star star-select"></i>
+											  	</li>
+											  	<li>
+											  		<i class="list-star-item fa fa-star"></i>
+											  	</li>
+											  </ul>
+											  <div class="total-vote"><h6>(71)</h6></div>
+				 						</div>
+				 					</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<div class="contact">LIÊN HỆ VỚI VUNGCAOFOOD</div>
+		<div class="sale-contact">NHU CẦU BÁN HÀNG</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,57 @@
+*{margin: 0; padding: 0;} 
+.itemimages figcaption {
+    text-align: center;
+    background: #adadcf;
+    color: white;
+}
+
+.itemimages {
+width: 25%;
+box-sizing: border-box;
+padding: 10px;
+transition: 0.5s;
+}
+
+.itemimages img {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 75%;
+    width: 100%
+} 
+.itemimages:hover{
+	transform: translateY(-30px);
+	box-shadow: 0px 19px 5px 1px #5c5b5b9e;
+
+}
+.glassblack {
+    background: #00000099;
+    height: 100%;
+    width: 100%;
+    top:0% ;
+    left: 0%;
+    position: fixed;
+    z-index: 4;
+    opacity: 1;
+    visibility: visible;
+}
+.detailimage {
+    height: auto;
+    width: auto;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    z-index: 4;
+    background: white;
+    opacity: 1;
+    visibility: visible;
+}
+.closebtn i.fa.fa-close {
+    margin-top: 0px;
+    float: right;
+    font-size: 60px;
+    color: orange;
+}

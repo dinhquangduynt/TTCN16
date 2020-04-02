@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>giỏ hàng</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">  
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="vendor/isotope.pkgd.min.js"></script>
+ 	<script type="text/javascript" src="cart.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="header.js"></script>
+	<!-- link css và jquery của sweetalert -->
+	<link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+	<!-- ------------------- -->
+ 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
+ 	<link rel="stylesheet" href="cart.css">
+ 	<link rel="stylesheet" type="text/css" href="header.css">
+</head>
+<body>
+	<div class="header">
+	  	    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none;border:none;" >
+				       <span class="menu-icon"><i class="fa fa-bars"></i></span>
+				</button>  
+			  	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+				    <ul class="navbar-nav  mx-auto">
+					      <li class="nav-item active">
+					        <a class="nav-link" href="#">Chăm sóc khách hàng<span class="sr-only">(current)</span></a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Bán hàng</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Kiểm tra đơn hàng</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Đăng nhập</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="#">Đăng ký</a>
+					      </li>
+					       <li class="nav-item" style="visibility: hidden;opacity: 0; z-index: 1000;position: fixed; ">
+					        <a class="nav-link" href="#" >Thông tin cá nhân</a>
+					      </li>
+
+				    </ul>
+				</div>
+			</nav>
+			<div class="bar-search">
+				 <div class="logo" id="id-logo">
+				    <a href="index.html" class="home-link" title="Trang chủ"><img src="images/logo_vungcaofood.png" width="100%"> </a>	
+				 </div>
+				 <div class="search-blank  ">
+				 	<div class="child-search-blank mx-auto " >
+				 		<input class="form-search" type="search" placeholder="Tìm kiếm trên VungCaoFood..." >
+				 		<button class="btn-search " type="submit" title="Tìm kiếm">
+				 		<i class="fa fa-search"></i>
+				 		</button>
+				 	</div>
+				 </div>
+				 <span class="cart-box">
+				 	<a href="#">
+				 		<span class="cart" title="Giỏ hàng">				 	
+						 	<i class="fa fa-shopping-cart"></i>
+						 </span>
+						 <span class="num-cart">0</span>
+				 	</a>
+				 </span>
+				 
+			</div>
+			<div class="mini-menu"  >
+				<div class="btn-list-product">
+					<span class="title-of-list-product">Danh mục</span>
+					<span class="icon-of-list-product"><i class="fa fa-angle-down"></i>
+					</span>
+				</div>
+				<div class="mini-sevice-content ">
+					<div class="content mx-auto" >
+						<div class="mini-card-service" title="Liên hệ">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-envelope"></i></span>
+								<span class="title-card">Liên hệ</span>
+							</a>
+						</div>
+						<div class="mini-card-service" title="Đánh giá">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-star"></i></span>
+								<span class="title-card">Đánh giá</span>
+							</a>
+						</div>
+						<div class="mini-card-service" title="Mã giảm giá">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-bookmark"></i></i></i></span>
+								<span class="title-card">Mã giảm giá</span>
+							</a>
+						</div>
+						<div class="mini-card-service" title="Ưu đãi">	
+							<a href="#">
+								<span class="card-icon"><i class="fa fa-heart"></i></span>
+								<span class="title-card">Ưu đãi</span>
+							</a>
+						</div>	
+					</div>
+				</div>	
+			</div>
+			<div class="vcf-memu-mobile-bottom">
+				<div class="vcf-menu-mobile-item">
+					<a href="index.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-home mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Trang chủ</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-bag mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Mall</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="filterproduct.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-th mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Danh mục</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="#" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-user mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Tài khoản</div>
+						</div>
+					</a>
+				</div>
+				<div class="vcf-menu-mobile-item">
+					<a href="cart.html" class="mx-auto">
+						<div class="vcf-menu-mobile-item-content mx-auto">
+							<div class="vcf-icon-item mx-auto">
+								<div class="icon">
+									<i class="fa fa-shopping-cart mx-auto"></i>
+								</div>
+							</div>
+							<div class="vcf-name-item">Giỏ hàng</div>
+						</div>
+					</a>
+				</div>
+			</div>
+	</div>
+	<!-- tab-list -->
+	<div class="dropdown-sub-menu">
+		<ul class="vcf-list dropdown-sub-menu-level-1">
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="1">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					<li class="vcf-item item-dropdown-sub-menu-level-2" isHover="false">
+						<h6>danh mucj</h6>
+						<ul class="vcf-list dropdown-sub-menu-level-3"></ul>
+					</li>
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="2">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="3">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+					
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="4">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="5">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="6">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="7">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="8">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+			<li class="vcf-item item-dropdown-sub-menu-level-1" isHover="false" idItem="9">
+				<h6>điện tử gia dụng</h6>
+				<ul class="vcf-list dropdown-sub-menu-level-2">
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- danh sách sản phẩm trong giỏ hàng -->
+	<div class="list-product-of-cart">
+		<div class="list-content mx-auto">
+			<div class="title"><H5>GIỎ HÀNG</H5></div>
+			<ul>
+				<li id="1">
+					<div class="item-cart" idProductInCart="1">
+						<div class="infor-mall">
+							<div class="skin">
+								<div class="name-of-mall">olala shop</div>
+							</div>
+							<div class="btn-delete-product-from-cart">
+								<button title="xóa sản phẩm"><i class="fa fa-trash"></i></button>
+							</div>
+						</div>
+						<div class="img-product" style="background-image: url(images/tao-do.jpg);" urlImage="images/tao-do.jpg">
+						</div>
+						<div class="quick-infor">
+							<div class="name">[táo đỏ trung quốc] ăn phát là biết có thuốc sâu ngay ăn đi ăn đi đừng ngại ngùng</div>
+							<div class="code-color-selected">
+								<span class="label">Màu sắc:</span><span class="value" idColor="123abc">màu đỏ</span>
+							</div>
+							<div class="size-selected">
+								<span class="label">Thể tích:</span><span class="value" idSize="10 lít">10 lít</span>
+							</div>
+							<div class="qty-selected">
+								<span class="label">Số lượng:</span><span class="value" qtyProduct="1">1</span>
+							</div>
+							<div class="bar-button-feedback">
+								<span>
+									<button>
+										<i class="fa fa-share"></i>
+									</button>
+								</span>
+								<span>
+									<button>
+										<i class="fa fa-heart"></i>
+									</button>
+								</span>
+							</div>
+						</div>
+						<div class="price-product">
+							<div class="price">
+								<span>120.000</span><span style="text-decoration-line: underline;">đ</span>
+							</div>
+							<div class="old-price">
+								<strike>145.000 đ</strike>
+							</div>
+							<div class="save">15%</div>
+						</div>
+						<div class="col-btn-right">
+							<div class="btn-change-option-product">
+								<button>CHỈNH SỬA</button>
+							</div>
+							<div class="btn-buy-product">
+								<a href="checkout.html"><button>THANH TOÁN</button></a>
+							</div>
+						</div>
+					</div>	
+				</li>
+				<li id="2">
+					<div class="item-cart" idProductInCart="2">
+						<div class="infor-mall">
+							<div class="skin">
+								<div class="name-of-mall">olala shop</div>
+							</div>
+							<div class="btn-delete-product-from-cart">
+								<button title="xóa sản phẩm"><i class="fa fa-trash"></i></button>
+							</div>
+						</div>
+						<div class="img-product" style="background-image: url(images/Chuoi.jpg);" urlImage="images/tao-do.jpg">
+						</div>
+						<div class="quick-infor">
+							<div class="name">[táo đỏ trung quốc] ăn phát là biết có thuốc sâu ngay ăn đi ăn đi đừng ngại ngùng</div>
+							<div class="code-color-selected">
+								<span class="label">Màu sắc:</span><span class="value" idColor="123abc">màu đỏ</span>
+							</div>
+							<div class="size-selected">
+								<span class="label">Thể tích:</span><span class="value" idSize="10 lít">10 lít</span>
+							</div>
+							<div class="qty-selected">
+								<span class="label">Số lượng:</span><span class="value" qtyProduct="1">1</span>
+							</div>
+							<div class="bar-button-feedback">
+								<span>
+									<button>
+										<i class="fa fa-share"></i>
+									</button>
+								</span>
+								<span>
+									<button>
+										<i class="fa fa-heart"></i>
+									</button>
+								</span>
+							</div>
+						</div>
+						<div class="price-product">
+							<div class="price">
+								<span>120.000</span><span style="text-decoration-line: underline;">đ</span>
+							</div>
+							<div class="old-price">
+								<strike>145.000 đ</strike>
+							</div>
+							<div class="save">15%</div>
+						</div>
+						<div class="col-btn-right">
+							<div class="btn-change-option-product">
+								<button>CHỈNH SỬA</button>
+							</div>
+							<div class="btn-buy-product">
+								<a href="checkout.html"><button>THANH TOÁN</button></a>
+							</div>
+						</div>
+					</div>	
+				</li>
+				<li id="3">
+					<div class="item-cart" idProductInCart="3">
+						<div class="infor-mall">
+							<div class="skin">
+								<div class="name-of-mall">olala shop</div>
+							</div>
+							<div class="btn-delete-product-from-cart">
+								<button title="xóa sản phẩm"><i class="fa fa-trash"></i></button>
+							</div>
+						</div>
+						<div class="img-product" style="background-image: url(images/thit-rung.jpg);" urlImage="images/tao-do.jpg">
+						</div>
+						<div class="quick-infor">
+							<div class="name">[táo đỏ trung quốc] ăn phát là biết có thuốc sâu ngay ăn đi ăn đi đừng ngại ngùng</div>
+							<div class="code-color-selected">
+								<span class="label">Màu sắc:</span><span class="value" idColor="123abc">màu đỏ</span>
+							</div>
+							<div class="size-selected">
+								<span class="label">Thể tích:</span><span class="value" idSize="10 lít">10 lít</span>
+							</div>
+							<div class="qty-selected">
+								<span class="label">Số lượng:</span><span class="value" qtyProduct="1">1</span>
+							</div>
+							<div class="bar-button-feedback">
+								<span>
+									<button>
+										<i class="fa fa-share"></i>
+									</button>
+								</span>
+								<span>
+									<button>
+										<i class="fa fa-heart"></i>
+									</button>
+								</span>
+							</div>
+						</div>
+						<div class="price-product">
+							<div class="price">
+								<span>120.000</span><span style="text-decoration-line: underline;">đ</span>
+							</div>
+							<div class="old-price">
+								<strike>145.000 đ</strike>
+							</div>
+							<div class="save">15%</div>
+						</div>
+						<div class="col-btn-right">
+							<div class="btn-change-option-product">
+								<button>CHỈNH SỬA</button>
+							</div>
+							<div class="btn-buy-product">
+								<a href="checkout.html"><button>THANH TOÁN</button></a>
+							</div>
+						</div>
+					</div>	
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="layer-black-behind-box-change">
+		<div class="box-change-info-product" idProduct="">
+			<div class="img-product-in-box col-lg-6 col-ms-12 col-md-12 col-12" >
+				<div class="bg-img mx-auto" style="background-image: url(images/na-đài-loan.jpg);"></div>
+			</div>
+			<div class="infor col-lg-6 col-ms-12 col-md-12 col-12">
+				<div class="name">
+					[na đài loan] nhìn là biết đéo ngon rồi nói chi ăn haixx chán 
+				</div>
+				<div class="bar-code-color">
+					<span class="label float-left">Màu sắc</span>
+					<div class="list-option-code-color">
+						<ul>
+							<li>
+								<div class="option-code-color">đỏ</div>
+							</li>
+							<li>
+								<div class="option-code-color">xanh</div>
+							</li>
+							<li>
+								<div class="option-code-color">đen</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bar-size">
+					<span class="label float-left">Kích thước</span>
+					<div class="list-option-size">
+						<ul>
+							<li>
+								<div class="option-size">1l</div>
+							</li>
+							<li>
+								<div class="option-size">2l</div>
+							</li>
+							<li>
+								<div class="option-size">3l</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bar-num-p">
+					<span>
+						<span  class="label float-left">Số lượng</span>
+						<span>
+							<button type="button" id="btn-sub-num-p" style="cursor:not-allowed; color: gray;"><i class="fa fa-minus" style="font-size: 150%;"></i></button>
+						</span>
+						<span  class="num-p" style="color: #095764; font-size: 150%; width: 20px; text-align: center; font-weight: bold;">1</span>
+						<span>
+							<button type="button" id="btn-add-num-p" style="cursor: pointer;"><i class="fa fa-plus" style="font-size: 150%;"></i></button>
+						</span>
+					</span>
+				</div>
+				<div class="sum-price">
+					<span class="label float-left">Tổng cộng</span>
+					<span class="price">120.000 đ</span>
+				</div>
+				<div class="btn-save-change">
+					<button type="button">XONG</button>
+				</div>
+			</div>
+		</div>
+		<div class="btn-cancel">
+			<button><i class="fa fa-close"></i></button>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<div class="contact">LIÊN HỆ VỚI VUNGCAOFOOD</div>
+		<div class="sale-contact">NHU CẦU BÁN HÀNG</div>
+	</div>	
+</body>
+</html>
